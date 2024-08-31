@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './Componentes/header';
 import Gallery from './Componentes/Gallery';
 import Footer from './Componentes/footer';
-import './Componente/stile.css';
+import './Componentes/style.css';
 
 
 function App() {
