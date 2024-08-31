@@ -270,7 +270,7 @@ function Formulario() {
 }
 
 
-function Reserva() {
+function Contacto() {
 
     return (
 
@@ -284,4 +284,4 @@ function Reserva() {
     )
 }
 
-export default Reserva
+export default Contacto
