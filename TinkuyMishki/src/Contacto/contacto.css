@@ -1,0 +1,192 @@
+.reservaContenedor{
+
+    height: 60vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 5%;
+}
+
+
+
+.LlenarForm{
+
+    margin-top: 6%;
+    width: 40%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+    
+}
+
+
+.cajaTexto{
+
+    border: 5px solid whitesmoke;
+    border-radius: 10px;
+    height: 80%;
+    box-shadow: 0 0 10px 5px #ffffff;
+
+
+}
+
+
+
+.text{
+
+    
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    height: 100%;
+
+    h2{
+
+        color: cyan;
+        text-transform: uppercase;
+    }
+
+
+    p{
+
+        display: block;
+        margin: 0;
+        text-align: justify;
+        box-sizing: border-box;
+        padding: 5px 20px;
+        color: white;
+
+    }
+}
+
+#text1{
+
+    display: block;
+    left:0;
+}
+#text2{
+
+    display: none;
+}
+#text3{
+
+    display: none;
+}
+
+.contenedorBotones{
+
+    margin: auto;
+    margin-top: 3%;
+    width:  50%;
+    display: flex;
+    justify-content: space-around;
+
+    button{
+
+        display: block;
+        border-radius: 10px;
+        padding: 10px;
+        width: 5px;
+        height: 3px;
+
+    }
+
+
+}
+
+button:first-child{
+
+    background-color: white;
+}
+
+
+
+
+.Formulario{
+
+    display: block;
+    box-sizing: border-box;
+    width: 40%;
+    height: 100%;
+    text-align: center;
+   
+
+    h2{
+
+        color:cyan;
+        font-size: 40px;
+    }
+    
+}
+
+.label{
+
+    display: block;
+    text-align: left;
+}
+
+.nombre_apellido{
+
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+}
+
+.contenedor_duo{
+
+    width: 45%;
+}
+
+.input{
+
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+
+}
+
+.contenedor_solo{
+
+
+    width: 95%;
+    margin: auto;
+
+}
+
+
+.input2{
+
+    width: 98.4%;
+    height: 90px
+
+
+}
+
+
+.boton_form{
+
+    margin: auto;
+    margin-top: 15px;
+    display: block;
+    width: 100%;
+    background-color: cyan;
+    width: 95%;
+
+
+}
+
+.barraNavegacion{
+
+
+    height: 10vh;
+    width: 100%;
+    background-color: cyan;
+    margin-bottom: 30px;
+}
