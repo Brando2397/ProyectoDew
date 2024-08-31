@@ -1,21 +1,16 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Contacto from './Contacto/contacto.jsx'
-
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
     <header>
       <img id="img-head" src='#' alt="Fondo" />
-      <button className="btn-volver"><a href='/Contacto'>Volver</a></button>
+      <button className="btn-volver">
+      <Link to="/main">Volver</Link> 
+      </button>
+      <Link to="/Contacto">Contacto</Link>
     </header>
   );
 };
-
-<Routes>
-
-
-<Route path="/Contacto" element={<Contacto />} />
-</Routes>
 
 export default Header;
