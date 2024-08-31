@@ -112,6 +112,9 @@ header {
 /*footer*/
 .pie{
     display: flex;
+    width: 100vw;
+    box-sizing: border-box;
+
 }
 
 .logo2{
@@ -155,15 +158,15 @@ header {
     color: white;
 }
 .header{
+    width: 25%;
     display: flex;
     justify-content: space-between;
-    padding: 50px;
     align-items: center;
 }
 .section{
+    width: 25%;
     display: inline-block;
     justify-content: space-evenly;
-    gap: 100px;
 }
 .section div{
     display: flex;
