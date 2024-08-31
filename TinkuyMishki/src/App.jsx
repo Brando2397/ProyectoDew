@@ -11,7 +11,7 @@ function App() {
     <Router> 
       <div className="App">
         <Header />
-        {/* Define las rutas de tu aplicación */}
+        {/* Define laaaaaas rutas de tu aplicación */}
         <Routes>
           <Route path="/main" element={<Gallery />} />
           <Route path="/Contacto" element={<Contacto />} />
