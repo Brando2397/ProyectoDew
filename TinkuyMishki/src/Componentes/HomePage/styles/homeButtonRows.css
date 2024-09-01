@@ -1,0 +1,31 @@
+.rows-main {
+    display: flex;
+    height: 750px;
+    width: 100%;
+    justify-content: center;
+}
+
+.button {
+    font-size: 100px;
+    text-shadow: 2px 2px 1px black;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-size: cover;
+    background-position: center;
+}
+
+#button1 {
+    background-image: url(../imgs/PLATOS-CRIOLLOS.jpg);
+}
+
+#button2 {
+    background-image: url(../imgs/PLATOS-MARINOS.jpg);
+}
+
+#button3 {
+    background-image: url(../imgs/POLLOS-Y-PARRILLAS.png);
+}
