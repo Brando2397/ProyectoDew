@@ -5,7 +5,7 @@ import  './Nosotros/Nosotros.css'
 const Header = () => {
   return (
         <>
-           <header>
+           <header className='headerPrincipañ'>
              <div className="Nosotros">
                <h1>Tinkuy Mishki</h1>
                <nav className="enlaces">

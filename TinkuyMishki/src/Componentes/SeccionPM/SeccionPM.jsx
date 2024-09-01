@@ -120,7 +120,51 @@ const items = [
       altText: 'Tiradito',
       price: 20.00,
       type: 'food'
+    },
+
+    {
+      title: 'Cerveza',
+      imgSrc: 'https://www.guiadelacerveza.com/wp-content/uploads/2023/10/Cervezas-mas-vendidas-en-Peru.jpg',
+      altText: 'Cerveza',
+      price: 7.00,
+      type: 'beverage'
+    },
+    {
+      title: 'Chicha morada',
+      imgSrc: 'https://www.lovferments.com/wp-content/uploads/2021/04/beb_chicha.jpg',
+      altText: 'Chicha morada',
+      price: 10.00,
+      type: 'beverage'
+    },
+    {
+      title: 'Limonada',
+      imgSrc: 'https://7diasdesabor.com/wp-content/uploads/2022/08/AdobeStock_190152413-scaled.jpeg',
+      altText: 'Limonada',
+      price: 12.00,
+      type: 'beverage'
+    },
+    {
+      title: 'Agua mineral',
+      imgSrc: 'https://i.ytimg.com/vi/YjAf4pW0N60/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCT1KXe5UzgQ2luLIzeECRURnc-YQ',
+      altText: 'Agua mineral',
+      price: 3.00,
+      type: 'beverage'
+    },
+    {
+      title: 'Vino',
+      imgSrc: 'https://imagenes.elpais.com/resizer/v2/HCLXJMCQPFGJBGOX56Z6DABR5I.jpg?auth=3450488eedd4dd2e7186f0c6ebbcd9a9e2f00204a9b92b8590bfbf1f4b1d7420&width=1960&height=1470&focal=989%2C906',
+      altText: 'Vino',
+      price: 25.00,
+      type: 'beverage'
+    },
+    {
+      title: 'Gaseosa',
+      imgSrc: 'https://www.filmsperu.pe/wp-content/uploads/2023/10/Marcas-de-gaseosas-mas-vendidas-del-peru.webp',
+      altText: 'Gaseosa',
+      price: 15.00,
+      type: 'beverage'
     }
+    
   ];
 
   const SeccionPm = () => {
@@ -137,7 +181,7 @@ const items = [
       setSelectedItems(prev => {
         const updatedItems = { ...prev };
         if (updatedItems[item.title]) {
-          updatedItems[item.title].quantity += 1;
+          updatedItems[item.title].quantity += 0.5;
         } else {
           updatedItems[item.title] = { ...item, quantity: 1 };
         }
@@ -153,7 +197,7 @@ const items = [
         const updatedItems = { ...prev };
         if (updatedItems[item.title]) {
           if (updatedItems[item.title].quantity > 1) {
-            updatedItems[item.title].quantity -= 1;
+            updatedItems[item.title].quantity -= 0.5;
           } else {
             delete updatedItems[item.title];
           }
@@ -173,7 +217,7 @@ const items = [
             {Object.values(selectedItems).filter(item => item.type === 'food').map((item, index) => (
               <li key={index}>
                 {item.title} - S/ {item.price.toFixed(2)} x {item.quantity}
-                <button onClick={() => handleCancel(item)}>Eliminar</button>
+                <button className='btnEliminar' onClick={() => handleCancel(item)}>Eliminar</button>
               </li>
             ))}
           </ul>

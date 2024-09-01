@@ -4,8 +4,8 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-header{
-    background-color: black;
+.headerPrincipañ{
+    background-color: #000000;
     width: 100%;
 
 }
@@ -38,9 +38,6 @@ header{
     background-color: rgb(60, 223, 98);
     border-radius: 10px;
 }
-
-
-
 
 
 .Informacion{
