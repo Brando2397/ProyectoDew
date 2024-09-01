@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import '../styles/homeOpeningAnimation.css';
+import '../HomePage/styles/homeOpeningAnimation.css';
 
 function OpeningAnimation() {
 
