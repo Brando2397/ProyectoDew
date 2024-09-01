@@ -181,7 +181,7 @@ const Gallery = () => {
     setSelectedItems(prev => {
       const updatedItems = { ...prev };
       if (updatedItems[item.title]) {
-        updatedItems[item.title].quantity += 1;
+        updatedItems[item.title].quantity += 0.5;
       } else {
         updatedItems[item.title] = { ...item, quantity: 1 };
       }
@@ -197,7 +197,7 @@ const Gallery = () => {
       const updatedItems = { ...prev };
       if (updatedItems[item.title]) {
         if (updatedItems[item.title].quantity > 1) {
-          updatedItems[item.title].quantity -= 1;
+          updatedItems[item.title].quantity -= 0.5;
         } else {
           delete updatedItems[item.title];
         }
@@ -217,7 +217,7 @@ const Gallery = () => {
           {Object.values(selectedItems).filter(item => item.type === 'food').map((item, index) => (
             <li key={index}>
               {item.title} - S/ {item.price.toFixed(2)} x {item.quantity}
-              <button onClick={() => handleCancel(item)}>Eliminar</button>
+              <button className='btnEliminar' onClick={() => handleCancel(item)}>Eliminar</button>
             </li>
           ))}
         </ul>
