@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    background-color: black;
+    width: 100%;
+
+}
+.Nosotros{
+    display: flex;
+}
+.Nosotros h1{
+    padding-left: 30px;
+    font-size: 30px;
+    color: white;
+    padding-top: 15px;
+}
+.enlaces ul{
+    margin: auto;
+    list-style-type: none;
+    font-size: 25px;
+    margin-left: 50px;
+}
+.enlaces li{
+    display: inline-flex;  
+}
+.enlaces a{
+    padding: 20px;
+    width: 200px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+.enlaces ul a:hover{
+    background-color: rgb(60, 223, 98);
+    border-radius: 10px;
+}
+
+
+
+
+
+.Informacion{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+.Carruseles{
+    width: 300%;
+    height: 130%;
+    display: flex;
+}
+.slider-section{
+    position: relative;
+    width: calc(100% / 3);
+    height: 100%;
+}
+.text-overlay {
+    position: absolute;
+    bottom: 255px;
+    left: 50px;
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 5;
+    max-width: 90%;
+}
+.slider-section img{
+    width: 100%;
+    height: 100%;
+    
+}
+.btn-left , .btn-right{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    color: black;
+    transform: translate(0, -50%);
+    transition: .5s ease;
+    user-select: none;
+    width: 50px;
+    height: 50px;
+    z-index: 15;
+}
+.btn-left:hover , .btn-right:hover{
+    background-color: #ffffffd4;
+    color: white;
+} 
+.btn-left{
+    left: 10px;
+}
+.btn-right{
+    right: 10px;
+}
+
+
+
+
+
+.pie{
+    display: flex;
+    background-color: black;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+.piedepagina{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    align-items: center;
+    width: 33%;
+}
+.logo2{
+    width: 250px;
+    height: 230px;
+    background: url(Logo.png);
+    background-position: center;
+    background-size: cover;
+    top: 10px;
+    filter: drop-shadow(0px 7px 21px red);
+    animation: rotar 5s linear infinite;
+}
+.logo2:hover{
+    cursor: pointer;
+}
+.redes{
+    margin-right: 50px;
+}
+.fb{
+    background: blue;
+    padding: 8px;
+    border-radius: 50px;
+    color: white;
+}
+.in{
+    background: rgb(207, 33, 230);
+    padding: 8px;
+    border-radius: 50px;
+    color: white;
+}
+.yt{
+    background: rgb(226, 9, 9);
+    padding: 8px;
+    border-radius: 50px;
+    color: white;
+}
+
+.MapadeSitio{
+    display: inline-block;
+    justify-content: space-evenly;
+    gap: 100px;
+    width: 33%;
+}
+.MapadeSitio div{
+    display: flex;
+    flex-direction: column;
+}
+.MapadeSitio h3 , .video h3{
+    color: green;
+    padding: 10px 0;
+}
+.MapadeSitio a{
+    color: rgb(12, 12, 12);
+    text-decoration: none;
+    color: white;
+}
+.map b{
+    color: white;
+}
+@keyframes rotar{
+    from{
+        transform: rotateY(180deg);
+    }
+    to{
+        transform: rotateY(-180deg);
+    }
+    
+}
+.map iframe {
+    width: 300px;
+    height: 200px;
+    margin-left: 170px;
+}
+.video{
+    width: 33%;
+    margin-bottom: 20px;
+}
+.video iframe{
+    width: 400px;
+    height: 300px;
+    margin-top: 10;
+}
+.video b{
+    color: white;
+}
