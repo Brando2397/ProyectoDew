@@ -4,6 +4,7 @@ import Contacto from './Componentes/Contacto/contacto.jsx';
 import Header from './Componentes/header';
 import Gallery from './Componentes/Gallery';
 import Footer from './Componentes/footer';
+import Carrusel from './Componentes/Nosotros/carrusel.jsx'
 import './Componentes/style.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/main" element={<Gallery />} />
           <Route path="/Contacto" element={<Contacto />} />
+          <Route path="/Carrusel" element={<Carrusel />} />
         </Routes>
         <Footer />
       </div>
