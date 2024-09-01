@@ -18,17 +18,13 @@ const Footer = () => {
              {/* Mapa de sitio */}
              <center><h3>Mapa de sitio</h3></center>
              <br />
-             <center><a href="../Seccion1-final/index.html"><font color="yellow">Inicio</font></a></center>  
-             <br />   
-             <center><a href="../Seccion1-final/Nosotros-final/Nosotros.html"><font color="yellow">Nosotros</font></a></center>
-             <br />
-             <center><a href="#"><font color="yellow">Productos</font></a></center>     
-             <br />
-             <center><a href="../Seccion1-final/Contactanos-final/Contactos.html"><font color="yellow">contactanos</font></a></center>
+            
        <div className="map">
            <Mapa />
        </div>
+          <br />
           <b><center>Copyright@2024Tinkuy Mishki</center></b>
+          <br />
           <b><center>All right reserved</center></b>
       </div>
       <div className="video">
