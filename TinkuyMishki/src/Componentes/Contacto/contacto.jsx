@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import './contacto.css'
 
+//PRIMERA PARTE DEL LA SECCION//
+
 function LlenarFormulario() {    
 
     let [style, setStyle] = useState({
@@ -44,8 +46,8 @@ function LlenarFormulario() {
                 ...prevStyle,
                 style1:{
                     ...prevStyle.style1,
-                    opacity:'1', transition: 'opacity 1.3s ease-in'}
-            }),500))
+                    opacity:'1', transition: 'opacity 0.5s ease-in'}
+            })),300)
 
        
         } else if (name === "btn2") {
@@ -73,8 +75,8 @@ function LlenarFormulario() {
                 ...prevStyle,
                 style2:{
                     ...prevStyle.style2,
-                    opacity:'1', transition:'opacity 1.3s ease-in'}
-            }),500))
+                    opacity:'1', transition:'opacity 0.5s ease-in'}
+                })),300)
         
         } else if (name === "btn3") {
 
@@ -101,8 +103,8 @@ function LlenarFormulario() {
                 ...prevStyle,
                 style3:{
                     ...prevStyle.style3,
-                    opacity:'1', transition: 'left 0.3s ease-in, opacity 1.3s ease-in'}
-            }),500))
+                    opacity:'1', transition: 'left 0.3s ease-in, opacity 0.5s ease-in'}
+                })),300)
         }  
 
     }
@@ -144,7 +146,7 @@ function LlenarFormulario() {
 }
 
 
-function Formulario() {
+function Formulario({pasarFuncion, pasarDatos}) {
 
     const [datos, setDatos] = useState({
 
@@ -157,20 +159,35 @@ function Formulario() {
     }
     )
 
-    const cambiarDatos = (e) => {
-        const { nombre, value } = e.target;
+    const pasarData = (datos) => {pasarDatos(datos)}
+
+    const cambiarDatos = (e) => 
+        {
+        const { name, value } = e.target;
 
         setDatos({
-            ...setDatos,
-            [nombre]: value
+            ...datos,
+            [name]: value
 
         });
 
+        pasarData(datos)
+
     }
+
+    const  reempSubmit = (e) => {
+        
+        e.preventDefault(),
+        pasarFuncion(),
+        cambiarDatos(e)
+
+    }
+
 
     return (
         <>
-            <form className="Formulario">
+
+            <form className="Formulario" onSubmit={reempSubmit}>
 
                 <h2>Ingresa tus datos</h2>
                 <div className="nombre_apellido" >
@@ -255,13 +272,9 @@ function Formulario() {
                             className="input input2"
                         />
                     </div>
-
-             
-
-
-
-                <button className="boton_form" type="submit">Enviar</button>
+                <button className="boton_form" type='submit'>ENVIAR</button>
             </form>
+            
 
         </>
     )
@@ -270,14 +283,219 @@ function Formulario() {
 }
 
 
+//SEGUNDA PARTE DEL LA SECCION//
+
+
+function SaludoAlCliente({datos,datos2,datos3}){
+
+    return (
+    
+    <>
+    <div className="contenedorSaludo">
+        <h2>Bienvenido,{datos.nombre} {datos.apellido}</h2>
+        <p>Por favor, elige la fecha cuando deseas hacer la reserva</p>
+        <h3>Datos de la Reserva:</h3>
+        <p>Fecha de la reserva: {datos2}</p>
+        <p>Hora de la reserva: {datos3}</p>
+        <button className="fecha">Aceptar</button>
+    </div>
+    
+    </>
+    )
+
+
+}
+
+function SeleccionarReserva({pasarDatos2,pasarDatos3}){
+
+
+    const pasarDatos21 = (datos) => {pasarDatos2(datos)}
+    const pasarDatos31 = (datos) => {pasarDatos3(datos)}
+
+    const fecha = new Date();
+
+    const diaFecha = fecha.getDate();
+
+    const formtFecha = { month: 'long'};
+    
+    const mesFecha = fecha.toLocaleDateString('Es-es',formtFecha);
+
+    const listFecha = [];
+
+    const listarFecha = () => {
+
+        for (let i = diaFecha; i < 7; i++) {
+
+            listFecha.push( mesFecha + " " + i )
+    
+        }
+
+
+    };
+
+    listarFecha()
+
+    const[estiloContenedorFecha,setEstiloContenderFecha] = useState({});
+
+    const aparecerHora = (e) => {
+
+        const datos = e.target.value;
+
+        pasarDatos21(datos)
+
+
+        setEstiloContenderFecha(prevStyle => ({
+
+            ...prevStyle,
+            display: 'grid',
+            opacity: '1'
+        }))
+    }
+
+    const aparecerFecha = (e) => {
+
+        const datos = e.target.value;
+
+        pasarDatos31(datos)
+    }
+    const listHora = ['6:30 p.m', '7:00 p.m','7:30 p.m','8:30 p.m', '8:45 p.m', '9:30 p.m'] 
+
+    const diagramarListFecha = listFecha.map((elemento,index) => (
+
+        <button className="fecha" key={index} value= {elemento} onClick={(e) => {aparecerHora(e)}} >{elemento}</button>
+
+    ))
+
+    const diagramarListHora = listHora.map((elemento,index) => (
+
+        <button className="fecha" value= {elemento} key={index}  onClick={(e) => {aparecerFecha(e)}} >{elemento}</button>
+
+    ))
+
+
+
+
+    return (
+    
+    <>
+    <div className="contenedorSeleccionReserva">
+        <h2>Confirme la fecha disponible</h2>
+        <div className="contenedorSeleccionFechaReserva">
+        {diagramarListFecha}
+        </div>
+        <div className="contenedorFecha" style={estiloContenedorFecha}>
+            <h2>Confirme la Hora disponible</h2>
+            <div className="contenedorSeleccionHoraReserva">
+            {diagramarListHora}
+        </div>
+        </div>
+        
+    </div>
+    
+    </>
+    )
+
+
+}
+
+
+
 function Contacto() {
+
+    const [styleCont, setStyleCont] = useState({
+        
+        
+    seccion1 : {right : '0px'},
+    seccion2 : {right : '100vw'},
+    
+    })
+
+    const [datosForm, setDatosForm] = useState({})
+
+    const [datosSaludo, setDatosSaludo] = useState()
+
+    const [datosHora, setDatosHora] = useState()
+
+    const recopilarDatos = (datos) => {
+
+        setDatosForm(datos)
+    }
+
+    const recopilarDatos2 = (datos2) => {
+
+        setDatosSaludo(datos2)
+    }
+
+    const recopilarDatos3 = (datos3) => {
+
+        setDatosHora(datos3)
+    }
+
+    const deslizar = () => {
+
+        console.log("tamos aqui");
+
+        setStyleCont(
+
+            {...styleCont, 
+            
+            seccion1 : {right : '100vw', transition: 'right 1s'},
+
+            }
+        )
+
+        setTimeout( 
+            
+            () => {
+            
+                setStyleCont(prevStyle => ({
+
+                    ...prevStyle, 
+            
+                        seccion1 : {display:'none'},
+                        seccion2: {display:'flex'}
+                        })
+                    )
+
+                }
+                      
+        ,500)
+
+        setTimeout( 
+            
+            () => {
+            
+                setStyleCont(
+                    
+                    prevStyle => ({
+
+                        ...prevStyle, 
+            
+                        seccion2 : {
+                            ...prevStyle.seccion2,
+                            left : '0px', transition: 'left 1s'}
+
+                    })
+                
+                )
+
+            }
+        ,550)
+
+
+    }
 
     return (
 
-        <>
-            <div className="reservaContenedor">
+        <>  
+            <div className="reservaContenedor reservaContenedor1" style={styleCont.seccion1}>
                 <LlenarFormulario></LlenarFormulario>
-                <Formulario></Formulario>
+                <Formulario pasarFuncion={deslizar} pasarDatos = {recopilarDatos}></Formulario>
+            </div>
+
+            <div className="reservaContenedor reservaContenedor2" style={styleCont.seccion2}>
+                <SaludoAlCliente datos={datosForm} datos2={datosSaludo} datos3={datosHora}></SaludoAlCliente>
+                <SeleccionarReserva pasarDatos2 = {recopilarDatos2} pasarDatos3 = {recopilarDatos3}></SeleccionarReserva>
             </div>
         </>
 
