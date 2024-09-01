@@ -14,13 +14,13 @@ function App() {
     <Router> 
       <div className="App">
         <Header />
-        <HomePage />
         {/* Define laaaaaas rutas de tu aplicación */}
         <Routes>
         <Route path="/main" element={<HomePage />} />
           <Route path="/Contacto" element={<Contacto />} />
-          <Route path="/Carrusel" element={<Carrusel />} />
+          <Route path="/Gallery" element={<Gallery />} />
           <Route path="/SeccionPM" element={<SeccionPM />} />
+          <Route path="/Carrusel" element={<Carrusel />} />
         </Routes>
         <Footer />
       </div>
