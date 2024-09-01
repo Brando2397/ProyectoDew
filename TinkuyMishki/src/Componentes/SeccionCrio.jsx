@@ -2,126 +2,125 @@ import React, { useState } from 'react';
 
 const items = [
     {
-      title: 'Arroz chaufa de mariscos S/ 13.00',
-      description: 'Mezcla de arroz frito acompañada de verduras, tortilla de huevo y carnes al gusto.',
-      imgSrc: 'https://www.comedera.com/wp-content/uploads/2022/02/arroz-chaufa-de-mariscos.jpg',
-      altText: 'Arroz chaufa de mariscos',
-      price: 13.00,
-      type: 'food'
-    },
-    {
-      title: 'Arroz con mariscos S/ 12.00',
-      description: 'Deliciosa preparación que combina el sabor y la textura del arroz con una variedad de mariscos y pescados frescos.',
-      imgSrc: 'https://meri.pe/wp-content/uploads/2023/02/arroz-con-mariscos.jpeg',
-      altText: 'Arroz con mariscos',
+      title: 'Carapulcra S/12.00',
+      description: 'Potaje indígena, preparado con papa seca sancochada y guisada con diversas carnes como pollo, gallina y chancho.',
+      imgSrc: 'https://www.icaperu.net/wp-content/uploads/2016/06/carapulcra.jpg',
+      altText: 'Carapulcra',
       price: 12.00,
       type: 'food'
     },
     {
-      title: 'Causa acevichada S/ 12.00',
-      description: 'Papa amarilla prensada y sazonada rellena de láminas de palta, cubierto de nuestro tradicional ceviche de pescado en salsa de pulpa de ají rojo.',
-      imgSrc: 'https://www.luchoscocinaperuana.es/wp-content/uploads/2020/12/CAUSA-ACEVICHADA.png',
-      altText: 'Causa acevichada',
-      price: 12.00,
+      title: 'Ceviche de pollo S/ 14.00',
+      description: 'Es una adaptación del famoso ceviche de pato norteño.',
+      imgSrc: 'https://labasilica640.pe/wp-content/uploads/2021/07/ceviche-de-pollo.jpg',
+      altText: 'Ceviche de pollo',
+      price: 14.00,
       type: 'food'
     },
     {
-      title: 'Ceviche S/ 15.00',
-      description: 'Platillo preparado con pescado crudo marinado en jugo de limón y condimentado con otros ingredientes que varían según la región.',
-      imgSrc: 'https://assets.unileversolutions.com/recipes-v2/234472.jpg',
-      altText: 'Ceviche',
-      price: 15.00,
-      type: 'food'
-    },
-    {
-      title: 'Chicharrón de calamar S/ 10.00',
-      description: 'El chicharrón de calamar es un plato típico de la gastronomía del Perú, originaria de la zona norte.',
-      imgSrc: 'https://i.pinimg.com/564x/80/6b/e7/806be75983327d0e55ce94115e7aa27e.jpg',
-      altText: 'Chicharrón de calamar',
+      title: 'Arroz tapado S/ 10.00',
+      description: 'En su preparación norteña, se elaboraba el relleno con mariscos.',
+      imgSrc: 'https://www.ajinomoto.com.pe:8085/img/receta/30.-ARROZ-TAPADO1.jpg',
+      altText: 'Arroz tapado',
       price: 10.00,
       type: 'food'
     },
     {
-      title: 'Chilcano S/ 8.00',
-      description: 'Se caracteriza por su combinación simple pero perfecta de pisco, ginger ale y limón.',
-      imgSrc: 'https://i.ytimg.com/vi/nNJGCHV1vbE/maxresdefault.jpg',
-      altText: 'Chilcano',
+      title: 'Escabeche de pollo S/ 15.00',
+      description: 'Su denominación proviene del árabe “sikbag”, plato persa mencionado en el libro “Las mil y una noches”.',
+      imgSrc: 'https://i.ytimg.com/vi/nclJw77czjw/maxresdefault.jpg',
+      altText: 'Escabeche de pollo',
+      price: 15.00,
+      type: 'food'
+    },
+    {
+      title: 'Ají de gallina S/ 13.00',
+      description: 'Consiste en un ají o crema espesa con pechuga de gallina deshilachada.',
+      imgSrc: 'https://perubicentenario.com/wp-content/uploads/2021/06/35.png',
+      altText: 'Ají de gallina',
+      price: 13.00,
+      type: 'food'
+    },
+    {
+      title: 'Papa rellena S/ 8.00',
+      description: 'Consiste en una masa frita de papa cocida, la cual será rellenada con una mezcla sazonada de carne de vacuno, aceitunas,cebollas y huevo duro.',
+      imgSrc: 'https://www.prensatotal.com/wp-content/uploads/2022/08/papa-rellena.jpg',
+      altText: 'Papa rellena',
       price: 8.00,
       type: 'food'
     },
     {
-      title: 'Choros a la chalaca S/ 16.00',
-      description: 'Se distingue por servirse precisamente en la valva de los choros, que hacen las veces de cucharas para poder llevarlos a la boca.',
-      imgSrc: 'https://www.comedera.com/wp-content/uploads/2022/06/choros-a-la-chalaca.jpg',
-      altText: 'Choros a la chalaca',
-      price: 16.00,
+      title: 'Locro S/ 11.00',
+      description: 'Es una especie de guiso de origen prehispánico y preincaico, típico de varios pueblos andinos, a base de zapallo, maíz ─especialmente blanco─ , poroto blanco y papas.',
+      imgSrc: 'https://www.clarin.com/2023/04/28/V62uLqcRD_1256x620__1.jpg',
+      altText: 'Locro',
+      price: 11.00,
       type: 'food'
     },
     {
-      title: 'Chupe de mariscos S/ 17.00',
-      description: 'Preparación culinaria en forma de sopa que presenta como ingrediente uno o varios tipos de mariscos.',
-      imgSrc: 'https://www.paulinacocina.net/wp-content/uploads/2024/03/chupe-de-camaron-Paulina-Cocina-Recetas-Cocina-Recetas-1.jpg',
-      altText: 'Chupe de mariscos',
-      price: 17.00,
-      type: 'food'
-    },
-    {
-      title: 'Conchita a la parmesana S/ 20.00',
-      description: 'Es un plato tradicional peruano que se sirve como aperitivo.',
-      imgSrc: 'https://www.joseantonio.com.pe/wp-content/uploads/2019/07/conchita-a-la-parmesana-1.jpg',
-      altText: 'Conchita a la parmesana',
-      price: 20.00,
-      type: 'food'
-    },
-    {
-      title: 'Jalea de pescado S/ 18.00',
-      description: 'Es un plato de pescado y mariscos fritos que se sirve con yuca frita y chifles.',
-      imgSrc: 'https://www.comedera.com/wp-content/uploads/2022/06/jalea-mixta.jpg',
-      altText: 'Jalea de pescado',
+      title: 'Lomo saltado S/ 18.00',
+      description: 'Es un plato de fusión muy popular que mezcla las tradiciones chinas del salteado con ingredientes peruanos que incluyen ají amarillo, cilantro y tomate.',
+      imgSrc: 'https://www.ilcb.edu.pe/repositorioaps/data/1/2/2/not/el-lomo-saltado/images/LOMO-SALTADO.jpg',
+      altText: 'Lomo saltado',
       price: 18.00,
       type: 'food'
     },
     {
-      title: 'Parihuela S/ 20.00',
-      description: 'Sopa de pescado y marisco típica de la costa peruana.',
-      imgSrc: 'https://www.comedera.com/wp-content/uploads/2022/01/parihuela.jpg',
-      altText: 'Parihuela',
-      price: 20.00,
+      title: 'Papa a la huancaina S/ 13.00',
+      description: 'Es un entrante típico de la gastronomía peruana que se ha difundido a diferentes regiones de Perú.',
+      imgSrc: 'https://www.peru.travel/Contenido/General/Imagen/es/64/1.1/papa-huancaina.jpg',
+      altText: 'Papa a la hauncaina',
+      price: 13.00,
       type: 'food'
     },
     {
-      title: 'Pescado al ajillo S/ 17.00',
-      description: 'El pescado al ajillo se hace combinando ajo, mantequilla o aceite de oliva con perejil o cilantro finamente troceado.',
-      imgSrc: 'https://aybmasters.com.do/recetas/wp-content/uploads/2016/05/pescado-al-ajillo-1.jpg',
-      altText: 'Pescado al ajillo',
+      title: 'Estofado de pollo S/ 14.00',
+      description: 'Es un clásico en la gastronomía peruana por su fácil preparación.',
+      imgSrc: 'https://www.ajinomoto.com.pe:8085/img/receta/128.-Estofado-de-pollo.jpg',
+      altText: 'Estofado de pollo',
+      price: 14.00,
+      type: 'food'
+    },
+    {
+      title: 'Seco de res S/ 17.00',
+      description: 'El seco es un guiso típico de la gastronomía de Perú..',
+      imgSrc: 'https://www.recetasthermomix.pe/wp-content/uploads/Imagen-1.png',
+      altText: 'Seco de res',
       price: 17.00,
       type: 'food'
     },
     {
-      title: 'Pescado frito S/ 17.00',
-      description: 'Pescado que se cocina sumergiéndolo en aceite o grasa caliente.',
-      imgSrc: 'https://i.ytimg.com/vi/HyBl-Du7OBc/maxresdefault.jpg',
-      altText: 'Pescado frito',
-      price: 17.00,
+      title: 'Chanfainita S/ 14.00',
+      description: 'Salsa espesa que acompaña generalmente a las asaduras de cerdo, cordero o conejo..',
+      imgSrc: 'https://i.ytimg.com/vi/AFuoikJ3P1Y/maxresdefault.jpg',
+      altText: 'Chanfainita',
+      price: 14.00,
       type: 'food'
     },
     {
-      title: 'Sudado de pescado S/ 16.00',
-      description: 'Consiste en cocer, en este caso el pescado, con poco líquido y dejar que suelte sus propios jugos.',
-      imgSrc: 'https://origin.cronosmedia.glr.pe/large/2021/03/18/lg_605360564332ac2dfc54e0cb.jpg',
-      altText: 'Sudado de pescado',
+      title: 'Pollo a la olla S/ 13.00',
+      description: 'Esta preparación consiste en un guiso de pollo sazonado con diversas especias y condimentos que le brindan un sabor único.',
+      imgSrc: 'https://recetascocinaperuana.com/wp-content/uploads/2022/04/pollo-a-la-olla-peruano-1.jpg',
+      altText: 'Pollo a la olla',
+      price: 13.00,
+      type: 'food'
+    },
+    {
+      title: 'Olluquito con carne S/ 16.00',
+      description: 'El olluquito con charqui es un plato típico de la gastronomía peruana preparado a base de ollucos y el charqui de llama.',
+      imgSrc: 'https://e.rpp-noticias.io/xlarge/2020/05/25/523352_946703.jpg',
+      altText: 'Olluquito con carne',
       price: 16.00,
       type: 'food'
     },
     {
-      title: 'Tiradito S/ 20.00',
-      description: 'Plato marino a base de pequeñas láminas de pescado cuya preparación es muy similar a la del Cebiche, por su "cocción" en jugo de limón, aunque no lleva cebolla.',
-      imgSrc: 'https://www.pescanova.pe/wp-content/uploads/2021/08/Tiradito-de-pejerrey.jpg',
-      altText: 'Tiradito',
+      title: 'Arroz con pollo S/ 20.00',
+      description: 'Consiste en arroz cocido con pollo y una variedad de verduras y condimentos.',
+      imgSrc: 'https://elcomercio.pe/resizer/pNYuIqb1TY0-JaaAu1rps8_ZXyc=/580x330/smart/filters:format(jpeg):quality(90)/cloudfront-us-east-1.images.arcpublishing.com/sandbox.elcomercio/H226OQ3Q6ZDMZH5TBABSPLMOO4.jpg',
+      altText: 'Arroz con pollo',
       price: 20.00,
       type: 'food'
     },
-
     {
       title: 'Cerveza',
       imgSrc: 'https://www.guiadelacerveza.com/wp-content/uploads/2023/10/Cervezas-mas-vendidas-en-Peru.jpg',
@@ -164,10 +163,9 @@ const items = [
       price: 15.00,
       type: 'beverage'
     }
-    
   ];
 
-  const SeccionPm = () => {
+  const Criollo = () => {
     const [selectedItems, setSelectedItems] = useState({});
     const [totalPrice, setTotalPrice] = useState(0);
   
@@ -217,7 +215,7 @@ const items = [
             {Object.values(selectedItems).filter(item => item.type === 'food').map((item, index) => (
               <li key={index}>
                 {item.title} - S/ {item.price.toFixed(2)} x {item.quantity}
-                <button className='btnEliminar' onClick={() => handleCancel(item)}>Eliminar</button>
+                <button  className='btnEliminar' onClick={() => handleCancel(item)}>Eliminar</button>
               </li>
             ))}
           </ul>
@@ -253,4 +251,4 @@ const items = [
     );
   };
   
-  export default SeccionPm;
+  export default Criollo;

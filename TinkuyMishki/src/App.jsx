@@ -7,6 +7,7 @@ import Gallery from './Componentes/Gallery';
 import Footer from './Componentes/footer';
 import Carrusel from './Componentes/Nosotros/carrusel.jsx'
 import SeccionPM from './Componentes/SeccionPM/SeccionPM.jsx';
+import Criollo from './Componentes/SeccionCrio.jsx'
 import './Componentes/style.css';
 
 function App() {
@@ -14,13 +15,14 @@ function App() {
     <Router> 
       <div className="App">
         <Header />
-        <HomePage />
         {/* Define laaaaaas rutas de tu aplicación */}
         <Routes>
         <Route path="/main" element={<HomePage />} />
           <Route path="/Contacto" element={<Contacto />} />
-          <Route path="/Carrusel" element={<Carrusel />} />
+          <Route path="/Gallery" element={<Gallery />} />
           <Route path="/SeccionPM" element={<SeccionPM />} />
+          <Route path="/Carrusel" element={<Carrusel />} />
+          <Route path="/Criollo" element={<Criollo />} />
         </Routes>
         <Footer />
       </div>
