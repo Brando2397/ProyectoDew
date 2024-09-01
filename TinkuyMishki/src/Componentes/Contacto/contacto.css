@@ -1,14 +1,21 @@
 .reservaContenedor{
 
     height: 60vh;
-    width: 100vw;
+    
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin-bottom: 15%;
 }
 
+.reservaContenedor1{
 
+    position: relative;
+    right: 0px;
+    width: 95vw;
+
+}
 
 .LlenarForm{
 
@@ -25,8 +32,9 @@
 
 .cajaTexto{
 
-    height: 84%;
-
+  
+    height: 80%;
+  
 
 
 }
@@ -92,19 +100,21 @@
 
     }
 
+    button:first-child{
+
+        background-color: white;
+    }
+    
 
 }
 
-button:first-child{
-
-    background-color: white;
-}
 
 
 
 
 .Formulario{
 
+    margin-top: 6% ;
     display: block;
     box-sizing: border-box;
     width: 40%;
@@ -147,6 +157,7 @@ button:first-child{
     width: 100%;
     height: 50px;
     background-color: white;
+    color:black
 
 }
 
@@ -174,17 +185,107 @@ button:first-child{
     margin-top: 15px;
     display: block;
     width: 100%;
+    height: 35px;
     background-color: cyan;
     width: 95%;
+    font-size: 15px;
+    border-radius: 15px;
 
 
 }
 
-.barraNavegacion{
+.reservaContenedor2{
+
+    position: relative;
+    display: none;
+    left: 100vw;
+    width: 95vw;
+    margin: auto;
+    align-items: center;
+
+}
+
+.contenedorSeleccionReserva{
+
+    color:antiquewhite;
+    width: 35%;
+    height: 80%;
+    display: block;
+    text-align: center;
+    h2{
+        text-transform: uppercase;
+        color:cyan;
+
+    }
+}
+
+.contenedorSaludo{
 
 
-    height: 10vh;
+    border-right: 1px solid aliceblue;
+    height: 80%;
+    box-sizing: border-box;
+    padding-left: 7.5%;
+    padding-top: 4%;
+    color:aliceblue;
+    width: 35%;
+    display: block;
+
+    p{
+        margin-bottom: 2%;
+    }
+    h2,h3{
+
+        color: cyan;
+    }
+}
+
+
+
+.contenedorSeleccionFechaReserva{
+    
+    box-sizing: border-box;
+    padding: 1%;
     width: 100%;
-    background-color: cyan;
-    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+
 }
+
+.fecha{
+
+    display: block;
+    color: beige;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 10px;
+    text-transform:capitalize;
+    text-align: center;
+    background-color: transparent;
+}
+
+.fecha:hover{
+
+    background-color: cyan;
+}
+
+.contenedorSeleccionHoraReserva{
+
+    box-sizing: border-box;
+    padding: 1%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+
+}
+
+.contenedorFecha{
+
+    display: none;
+    opacity: 0;
+    h2{
+        color:cyan;
+    }
+}   

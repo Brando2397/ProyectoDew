@@ -47,7 +47,7 @@ const items = [
       imgSrc: 'https://i.ytimg.com/vi/nNJGCHV1vbE/maxresdefault.jpg',
       altText: 'Chilcano',
       price: 8.00,
-      type: 'drink'
+      type: 'food'
     },
     {
       title: 'Choros a la chalaca S/ 16.00',
