@@ -5,6 +5,7 @@ import Header from './Componentes/header';
 import Gallery from './Componentes/Gallery';
 import Footer from './Componentes/footer';
 import Carrusel from './Componentes/Nosotros/carrusel.jsx'
+import SeccionPM from './Componentes/SeccionPM/SeccionPM.jsx';
 import './Componentes/style.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/main" element={<Gallery />} />
           <Route path="/Contacto" element={<Contacto />} />
           <Route path="/Carrusel" element={<Carrusel />} />
+          <Route path="/SeccionPM" element={<SeccionPM />} />
         </Routes>
         <Footer />
       </div>
